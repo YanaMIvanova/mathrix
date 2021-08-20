@@ -9,8 +9,7 @@ function SectionPage({sectionTitle, categoryName}) {
       <Helmet>
         <title>{capitalizeFirstLetter(categoryName)}</title>
       </Helmet>
-      <h1>{capitalizeFirstLetter(categoryName)}</h1>
-      <h2>{sectionTitle}</h2>
+      <h2 className="ps-3 fw-bold">{sectionTitle}</h2>
     </>
   );
 }

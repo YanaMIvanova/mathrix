@@ -12,10 +12,10 @@ import { ALGEBRA_BG, GEOMETRY_BG, ALGEBRA, GEOMETRY } from "../data/constants";
 const App = () => (
   <Container className="bg-white h-100">
     <Nav>
-      <LinkContainer to={getPath(ALGEBRA)}>
+      <LinkContainer to={getPath(ALGEBRA)} className="link">
         <Nav.Link>{capitalizeFirstLetter(ALGEBRA_BG)}</Nav.Link>
       </LinkContainer>
-      <LinkContainer to={getPath(GEOMETRY)}>
+      <LinkContainer to={getPath(GEOMETRY)} className="link">
         <Nav.Link>{capitalizeFirstLetter(GEOMETRY_BG)}</Nav.Link>
       </LinkContainer>
     </Nav>

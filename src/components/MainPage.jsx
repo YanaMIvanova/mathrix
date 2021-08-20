@@ -15,10 +15,10 @@ function MainPage({categoryBulgarianName, categoryName}) {
       <Helmet>
         <title>{capitalizeFirstLetter(categoryBulgarianName)}</title>
       </Helmet>
-      <h1>{capitalizeFirstLetter(categoryBulgarianName)}</h1>
+      <h1 className="ps-3 fw-bold">{capitalizeFirstLetter(categoryBulgarianName)}</h1>
       <ListGroup variant="flush">
         {getCategories({ categoryName }).map((page) => (
-          <ListGroup.Item key={page.id}>
+          <ListGroup.Item key={page.id} className="link">
             <Link to={{ pathname: `${getPath(categoryName)}/${page.id}` }}>
               {page.title}
             </Link>
