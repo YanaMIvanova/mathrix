@@ -1,10 +1,9 @@
 import categories from "./categories";
 
-export const getCategories = ({ categoryName }) =>
-  categories.algebra ?? categories[categoryName];
+export const getCategories = ({ categoryName }) => categories[categoryName];
 
-export const getSectionDetails = ({ categoryName, sectionId }) =>
-  getCategories({ categoryName }).find((section) => section.id === sectionId);
+export const getSectionTitle = ({ categoryName, sectionId }) =>
+  getCategories({ categoryName }).find((section) => section.id === sectionId)['title'];
 
 export const getPath = (sectionName) => `/${sectionName}`;
 
