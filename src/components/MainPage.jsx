@@ -7,24 +7,19 @@ import {
   getCategories,
   capitalizeFirstLetter,
   getPath,
-} from "../../data/utils";
-import { GEOMETRY, GEOMETRY_BG } from "../../data/constants";
+} from "../data/utils";
 
-function GeometryMainPage() {
+function MainPage({categoryBulgarianName, categoryName}) {
   return (
     <>
       <Helmet>
-        <title>{capitalizeFirstLetter(GEOMETRY_BG)}</title>
+        <title>{capitalizeFirstLetter(categoryBulgarianName)}</title>
       </Helmet>
-      <h1>{capitalizeFirstLetter(GEOMETRY_BG)}</h1>
+      <h1>{capitalizeFirstLetter(categoryBulgarianName)}</h1>
       <ListGroup variant="flush">
-        {getCategories({ categoryName: GEOMETRY }).map((page) => (
+        {getCategories({ categoryName }).map((page) => (
           <ListGroup.Item key={page.id}>
-            <Link
-              to={{
-                pathname: `${getPath(GEOMETRY)}/${page.id}`,
-              }}
-            >
+            <Link to={{ pathname: `${getPath(categoryName)}/${page.id}` }}>
               {page.title}
             </Link>
           </ListGroup.Item>
@@ -34,4 +29,4 @@ function GeometryMainPage() {
   );
 }
 
-export default GeometryMainPage;
+export default MainPage;

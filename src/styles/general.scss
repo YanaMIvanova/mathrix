@@ -9,3 +9,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+a, .nav-link {
+  text-decoration: none;
+  color: #023a52;
+
+  &:hover {
+    color: #03587c;
+  }
+}
